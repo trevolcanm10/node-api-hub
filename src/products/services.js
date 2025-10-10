@@ -17,7 +17,7 @@ const getById = async(id) =>{
 };
 const create = async (product) =>{
     const collection = await Database(COLLECTION);
-    let result = collection.insertOne(product);//Crea un nuevo producto
+    let result = await collection.insertOne(product);//Crea un nuevo producto
     return result.insertedId//Regresa el id del producto que se acaba de crear
 };
 
